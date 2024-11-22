@@ -23,8 +23,8 @@
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E          &kp R           &kp T        &kp Y      &kp U  &kp I       &kp O    &kp P     &kp BACKSPACE
 &kp LCTRL  &kp A  &kp S  &kp D          &kp F           &kp G        &kp H      &kp J  &kp K       &kp L    &kp SEMI  &kp SQT
-&to 1      &kp Z  &kp X  &kp C          &kp V           &kp B        &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp LEFT_ALT
-                         &kp LEFT_META  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &to 2  &kp ESCAPE
+&sl 1      &kp Z  &kp X  &kp C          &kp V           &kp B        &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp LEFT_ALT
+                         &kp LEFT_META  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &sl 2  &kp ESCAPE
             >;
         };
 
@@ -37,10 +37,10 @@
 
             display-name = "BT";
             bindings = <
-&kp TAB  &kp N1        &kp N2        &kp N3        &kp N4          &kp N5          &kp N6     &kp N7    &kp N8      &kp N9     &kp N0      &kp BACKSPACE
-&trans   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &kp LEFT   &kp DOWN  &kp UP      &kp RIGHT  &trans      &bt BT_CLR_ALL
-&to 0    &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)       &kp LC(Y)       &trans     &trans    &trans      &trans     &bt BT_CLR  &kp LEFT_ALT
-                                     &kp LEFT_WIN  &kp LEFT_SHIFT  &kp SPACE       &kp ENTER  &to 0     &kp ESCAPE
+&kp TAB           &kp N1        &kp N2        &kp N3        &kp N4          &kp N5          &kp N6     &kp N7    &kp N8      &kp N9     &kp N0      &kp BACKSPACE
+&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &kp LEFT   &kp DOWN  &kp UP      &kp RIGHT  &trans      &bt BT_CLR_ALL
+&to 0             &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)       &kp LC(Y)       &trans     &trans    &trans      &trans     &bt BT_CLR  &kp LEFT_ALT
+                                              &kp LEFT_WIN  &kp LEFT_SHIFT  &kp SPACE       &kp ENTER  &to 0     &kp ESCAPE
             >;
         };
 
