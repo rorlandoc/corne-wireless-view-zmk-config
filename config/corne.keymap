@@ -56,16 +56,16 @@
 &kp TAB    &kp EXCL            &kp AT   &kp HASH       &kp DLLR        &kp PRCNT          &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BACKSPACE
 &kp LCTRL  &kp RALT            &kp INS  &kp HOME       &kp PAGE_UP     &kp PRINTSCREEN    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &to 0      &kp K_CONTEXT_MENU  &kp DEL  &kp END        &kp PAGE_DOWN   &trans             &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                        &kp LEFT_META  &kp LEFT_SHIFT  &kp SPACE          &kp ENTER  &to 3      &kp ESCAPE
+                                        &kp LEFT_META  &kp LEFT_SHIFT  &kp SPACE          &kp ENTER  &sl 3      &kp ESCAPE
             >;
         };
 
         raise_again {
             bindings = <
-&kp TAB    &kp CAPS  &kp F7  &kp F8    &kp F9            &kp F12      &kp LG(L)  &kp N7             &kp N8   &kp N9  &trans              &kp BSPC
-&kp LCTRL  &trans    &kp F4  &kp F5    &kp F6            &kp F11      &trans     &kp N4             &kp N5   &kp N6  &kp LG(LS(S))       &kp RALT
-&to 0      &trans    &kp F1  &kp F2    &kp F3            &kp F10      &kp N0     &kp N1             &kp N2   &kp N3  &kp K_CONTEXT_MENU  &kp LALT
-                             &kp LGUI  &kp LG(LC(LEFT))  &kp SPACE    &kp ENTER  &kp LG(LC(RIGHT))  &kp ESC
+&kp TAB    &kp F12  &kp F7  &kp F8    &kp F9          &kp CAPSLOCK        &kp LA(APOS)       &kp N7  &kp N8  &kp N9  &kp LG(L)           &kp BSPC
+&kp LCTRL  &kp F11  &kp F4  &kp F5    &kp F6          &kp LC(LG(LEFT))    &kp LG(LC(RIGHT))  &kp N4  &kp N5  &kp N6  &kp LG(LS(S))       &kp RALT
+&to 0      &kp F10  &kp F1  &kp F2    &kp F3          &kp LC(CAPSLOCK)    &kp LA(CLCK)       &kp N1  &kp N2  &kp N3  &kp K_CONTEXT_MENU  &kp LALT
+                            &kp LGUI  &kp LEFT_SHIFT  &kp SPACE           &kp ENTER          &trans  &kp N0
             >;
 
             label = "Function";
