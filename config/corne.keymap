@@ -62,7 +62,7 @@
 
         raise_again {
             bindings = <
-&kp TAB    &kp F12  &kp F7  &kp F8    &kp F9          &kp CAPSLOCK        &kp LA(APOS)       &kp N7  &kp N8  &kp N9  &kp LG(L)           &kp BSPC
+&kp TAB    &kp F12  &kp F7  &kp F8    &kp F9          &kp CAPSLOCK        &kp LA(GRAVE)      &kp N7  &kp N8  &kp N9  &kp LG(L)           &kp BSPC
 &kp LCTRL  &kp F11  &kp F4  &kp F5    &kp F6          &kp LC(LG(LEFT))    &kp LG(LC(RIGHT))  &kp N4  &kp N5  &kp N6  &kp LG(LS(S))       &kp RALT
 &to 0      &kp F10  &kp F1  &kp F2    &kp F3          &kp LC(CAPSLOCK)    &kp LA(CLCK)       &kp N1  &kp N2  &kp N3  &kp K_CONTEXT_MENU  &kp LALT
                             &kp LGUI  &kp LEFT_SHIFT  &kp SPACE           &kp ENTER          &trans  &kp N0
