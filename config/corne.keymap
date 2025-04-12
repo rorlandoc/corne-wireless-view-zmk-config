@@ -12,7 +12,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -28,47 +28,58 @@
             >;
         };
 
-        lower_layer {
+        l1 {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "BT";
+            display-name = "Lower 1";
             bindings = <
-&kp TAB           &kp N1        &kp N2        &kp N3        &kp N4          &kp N5          &kp N6     &kp N7    &kp N8      &kp N9     &kp N0      &kp BACKSPACE
-&kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &kp LEFT   &kp DOWN  &kp UP      &kp RIGHT  &trans      &bt BT_CLR_ALL
-&to 0             &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)       &kp LC(Y)       &trans     &trans    &trans      &trans     &bt BT_CLR  &kp LEFT_META
-                                              &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE       &kp ENTER  &to 0     &kp ESCAPE
+&trans  &none         &none         &none         &none         &none           &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none       &none
+&to 4   &none         &none         &none         &none         &bt BT_CLR      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans
+                                    &trans        &trans        &trans          &trans           &to 0            &trans
             >;
         };
 
-        raise_layer {
+        r1 {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Symbols";
+            display-name = "Raise 1";
             bindings = <
-&kp TAB    &kp EXCL            &kp AT   &kp HASH      &kp DLLR        &kp PRCNT          &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BACKSPACE
-&kp LCTRL  &kp RALT            &kp INS  &kp HOME      &kp PAGE_UP     &kp PRINTSCREEN    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&to 0      &kp K_CONTEXT_MENU  &kp DEL  &kp END       &kp PAGE_DOWN   &trans             &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                        &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE          &kp ENTER  &sl 3      &kp ESCAPE
+&trans  &kp EXCL            &kp AT   &kp HASH  &kp DLLR       &kp PRCNT          &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR       &trans
+&trans  &kp RALT            &kp INS  &kp HOME  &kp PAGE_UP    &kp PRINTSCREEN    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp PIPE       &kp GRAVE
+&to 0   &kp K_CONTEXT_MENU  &kp DEL  &kp END   &kp PAGE_DOWN  &kp TILDE          &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp BACKSLASH  &trans
+                                     &trans    &trans         &trans             &trans     &sl 3      &trans
             >;
         };
 
-        raise_again {
+        r2 {
             bindings = <
-&kp TAB    &kp F12  &kp F7  &kp F8        &kp F9          &kp CAPSLOCK        &kp LA(GRAVE)      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none               &kp BSPC
-&kp LCTRL  &kp F11  &kp F4  &kp F5        &kp F6          &kp LC(LG(LEFT))    &kp LG(LC(RIGHT))  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LC(LG(Q))       &kp LG(LS(NUMBER_5))
-&to 0      &kp F10  &kp F1  &kp F2        &kp F3          &kp LC(CAPSLOCK)    &kp LA(CLCK)       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp K_CONTEXT_MENU  &kp LEFT_META
-                            &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE           &kp ENTER          &trans           &kp KP_NUMBER_0
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp CAPSLOCK        &kp LG(LS(NUMBER_4))  &kp LG(LS(N5))  &none            &none  &none  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(LG(LEFT))    &kp LG(LC(RIGHT))     &kp C_VOL_DN    &kp C_VOLUME_UP  &none  &none  &none
+&to 0   &kp F10  &kp F1  &kp F2  &kp F3  &none               &kp LC(LG(Q))         &none           &none            &none  &none  &trans
+                         &trans  &trans  &trans              &trans                &none           &trans
             >;
 
-            label = "Function";
+            label = "Raise 2";
+        };
+
+        L2 {
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7          &kp N8        &kp N9      &kp N0  &trans
+&trans  &none         &none         &none         &none         &none     &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT   &none   &none
+&to 0   &none         &none         &none         &none         &none     &none         &none           &kp COMMA     &kp PERIOD  &none   &trans
+                                    &trans        &trans        &trans    &trans        &to 0           &trans
+            >;
+
+            label = "Lower 2";
         };
     };
 };
