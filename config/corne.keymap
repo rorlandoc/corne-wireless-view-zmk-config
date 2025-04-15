@@ -9,31 +9,43 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        combo_arrowL {
-            bindings = <&kp LEFT_ARROW>;
-            key-positions = <37 18>;
-            layers = <1>;
+    behaviors {
+        bhv_left: bhv_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BHV_LEFT";
+            bindings = <&kp H>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
 
-        combo_arrowR {
-            bindings = <&kp RIGHT_ARROW>;
-            key-positions = <37 21>;
-            layers = <1>;
+        bhv_right: bhv_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BHV_RIGHT";
+            bindings = <&kp L>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
 
-        combo_arrowD {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <37 19>;
-            layers = <1>;
+        bhv_down: bhv_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BHV_DOWN";
+            bindings = <&kp J>, <&kp DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
 
-        combo_arrowU {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <37 20>;
-            layers = <1>;
+        bhv_up: bhv_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BHV_UP";
+            bindings = <&kp K>, <&kp UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
