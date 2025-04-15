@@ -9,6 +9,34 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_arrowL {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <37 18>;
+            layers = <1>;
+        };
+
+        combo_arrowR {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <37 21>;
+            layers = <1>;
+        };
+
+        combo_arrowD {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <37 19>;
+            layers = <1>;
+        };
+
+        combo_arrowU {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <37 20>;
+            layers = <1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
