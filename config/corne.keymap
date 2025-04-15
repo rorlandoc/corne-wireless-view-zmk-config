@@ -23,7 +23,7 @@
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E         &kp R           &kp T        &kp Y      &kp U  &kp I       &kp O    &kp P     &kp BACKSPACE
 &kp LCTRL  &kp A  &kp S  &kp D         &kp F           &kp G        &kp H      &kp J  &kp K       &kp L    &kp SEMI  &kp SQT
-&to 1      &kp Z  &kp X  &kp C         &kp V           &kp B        &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp LEFT_META
+&sl 1      &kp Z  &kp X  &kp C         &kp V           &kp B        &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp LEFT_META
                          &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &sl 2  &kp ESCAPE
             >;
         };
@@ -38,8 +38,8 @@
             display-name = "Lower 1";
             bindings = <
 &trans  &none         &none         &none         &none         &none           &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none       &none
-&to 4   &none         &none         &none         &none         &bt BT_CLR      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON   &none
+&sl 4   &none         &none         &none         &none         &bt BT_CLR      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans
                                     &trans        &trans        &trans          &trans           &to 0            &trans
             >;
         };
