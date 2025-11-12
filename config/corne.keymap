@@ -11,44 +11,6 @@
 / {
     combos { compatible = "zmk,combos"; };
 
-    behaviors {
-        bhv_left: bhv_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BHV_LEFT";
-            bindings = <&kp H>, <&kp LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        bhv_right: bhv_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BHV_RIGHT";
-            bindings = <&kp L>, <&kp RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        bhv_down: bhv_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BHV_DOWN";
-            bindings = <&kp J>, <&kp DOWN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        bhv_up: bhv_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BHV_UP";
-            bindings = <&kp K>, <&kp UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
