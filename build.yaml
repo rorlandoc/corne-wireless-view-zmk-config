@@ -23,7 +23,6 @@ include:
     snippet: zmk-usb-logging
   - board: raytac_mdbt50q_rx
     shield: corne_dongle
-    snippet: zmk-usb-logging
   - board: raytac_mdbt50q_rx
     shield: settings_reset
   - board: nice_nano_v2
