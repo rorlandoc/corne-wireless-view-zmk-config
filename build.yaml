@@ -1,30 +1,25 @@
-# This file generates the GitHub Actions matrix
-# For simple board + shield combinations, add them
-# to the top level board and shield arrays, for more
-# control, add individual board + shield combinations to
-# the `include` property, e.g:
-#
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#
 ---
 include:
-  - board: nice_nano_v2
-    shield: corne_left nice_view_adapter nice_view
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    snippet: zmk-usb-logging
-    snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
-    shield: corne_right nice_view_adapter nice_view
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    snippet: zmk-usb-logging
   - board: raytac_mdbt50q_rx
     shield: corne_dongle
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    artifact-name: raytac_mdbt50q_rx_corne_dongle
+
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: nice_nano_v2_corne_left
+
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: nice_nano_v2_corne_right
+
   - board: raytac_mdbt50q_rx
     shield: settings_reset
+    artifact-name: raytac_mdbt50q_rx_settings_reset
+
   - board: nice_nano_v2
     shield: settings_reset
+    artifact-name: nice_nano_v2_settings_reset
