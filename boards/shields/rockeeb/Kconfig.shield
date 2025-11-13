@@ -1,0 +1,2 @@
+config SHIELD_ROCKEEB_DONGLE
+    def_bool $(shields_list_contains,rockeeb_dongle)
