@@ -1,7 +1,7 @@
 ---
 include:
   - board: raytac_mdbt50q_rx
-    shield: rockeeb_dongle
+    shield: corne_dongle
     artifact-name: raytac_mdbt50q_rx_corne_dongle
 
   - board: nice_nano_v2

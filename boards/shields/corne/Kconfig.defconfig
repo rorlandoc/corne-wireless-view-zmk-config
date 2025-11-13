@@ -1,15 +1,15 @@
-if SHIELD_ROCKEEB_DONGLE
+if SHIELD_CORNE_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "Corne"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
 
 config ZMK_USB
     default y
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
