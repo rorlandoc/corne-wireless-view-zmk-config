@@ -125,10 +125,19 @@
         game {
             display-name = "Game";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R           &kp T        &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3   &none  &kp P  &none
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F           &kp G        &kp H         &kp I            &kp N          &none  &none  &kp LEFT_META
-&sl 0      &kp Z  &kp X  &kp C         &kp V           &kp B        &kp F3        &kp F4           &kp F6         &none  &none  &kp ESCAPE
-                         &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER     &kp RIGHT_SHIFT  &kp RIGHT_ALT
+&kp TAB           &kp Q  &kp W  &kp E  &kp R  &kp T    &kp GRAVE        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp ENTER
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D  &kp F  &kp G    &to 0            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &kp LEFT_META
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3        &none  &kp ESCAPE
+                                &kp H  &kp J  &sl 6    &kp L            &kp N            &kp M
+            >;
+        };
+
+        game2 {
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &kp NUMBER_6    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans        &to 5           &trans  &trans  &trans
             >;
         };
     };
