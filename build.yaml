@@ -21,7 +21,7 @@ include:
   - board: raytac_mdbt50q_rx
     shield: corne_dongle
     snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS=2 -DCONFIG_ZMK_USB_LOGGING=y -DCONFIG_LOG=y -DCONFIG_SERIAL=y -DCONFIG_CONSOLE=y -DCONFIG_UART_CONSOLE=y -DCONFIG_USB_CDC_ACM=y
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS=2
     artifact-name: corne_dongle_debug
   - board: raytac_mdbt50q_rx
     shield: settings_reset
