@@ -18,6 +18,11 @@ include:
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS=2
     artifact-name: corne_dongle
   - board: raytac_mdbt50q_rx
+    shield: corne_dongle
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS=2 -DCONFIG_ZMK_LOG_LEVEL=4
+    artifact-name: corne_dongle_debug
+  - board: raytac_mdbt50q_rx
     shield: settings_reset
     artifact-name: raytac_settings_reset
   - board: nice_nano_v2
