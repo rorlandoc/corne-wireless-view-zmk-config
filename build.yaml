@@ -15,7 +15,6 @@
 include:
   - board: raytac_mdbt50q_rx
     shield: corne_dongle
-    snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS=2
     artifact-name: corne_dongle
   - board: raytac_mdbt50q_rx
